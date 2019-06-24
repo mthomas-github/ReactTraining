@@ -7,7 +7,7 @@ export const ColorTool = (props) => {
   const [ colorForm, change ] = useForm({
     newColor: '',
     newHexCode: '',
-  })
+  });
 
   return <>
     <header>
