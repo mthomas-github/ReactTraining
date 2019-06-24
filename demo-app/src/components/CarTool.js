@@ -19,7 +19,7 @@ export const CarTool = () => {
             </thead>
             <tbody>
                 <tr>
-                    <td>1</td>
+                    <td>Telsa1</td>
                     <td>Telsa</td>
                     <td>Model S</td>
                     <td>2019</td>
@@ -27,7 +27,7 @@ export const CarTool = () => {
                     <td>$165,000</td>
                 </tr>
                 <tr>
-                    <td>1</td>
+                    <td>Telsa2</td>
                     <td>Telsa</td>
                     <td>Model 3</td>
                     <td>2019</td>
