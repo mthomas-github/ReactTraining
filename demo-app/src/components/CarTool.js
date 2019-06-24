@@ -1,7 +1,30 @@
 import React from "react";
 
 export const CarTool = () => {
-    // JSX Syntax
+
+    const carsHeader = [
+        'Id', 'Make', 'Model', 'Year', 'Color', 'Price'
+    ];
+
+    const cars = [
+        {
+            id: 'Telsa1',
+            make: 'Telsa',
+            model: 'Model S',
+            year: 2019,
+            color: 'Black',
+            price: 165000
+        },
+        {
+            id: 'Telsa2',
+            make: 'Telsa',
+            model: 'Model 3',
+            year: 2019,
+            color: 'White',
+            price: 65000
+        }
+    ];
+
     return <>
         <header>
             <h1>Car Tool</h1>
@@ -9,31 +32,20 @@ export const CarTool = () => {
         <table>
             <thead>
                 <tr>
-                    <th>Id</th>
-                    <th>Make</th>
-                    <th>Model</th>
-                    <th>Year</th>
-                    <th>Color</th>
-                    <th>Price</th>
+                    {carsHeader.map((carHeader, index) => <th key={index}>{carHeader}</th>)}
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Telsa1</td>
-                    <td>Telsa</td>
-                    <td>Model S</td>
-                    <td>2019</td>
-                    <td>Black</td>
-                    <td>$165,000</td>
-                </tr>
-                <tr>
-                    <td>Telsa2</td>
-                    <td>Telsa</td>
-                    <td>Model 3</td>
-                    <td>2019</td>
-                    <td>White</td>
-                    <td>$60,000</td>
-                </tr>
+                {cars.map(car =>
+                    <tr key={car.id}>
+                        <td>{car.id}</td>
+                        <td>{car.make}</td>
+                        <td>{car.model}</td>
+                        <td>{car.year}</td>
+                        <td>{car.color}</td>
+                        <td>{car.price}</td>
+                    </tr>
+                )}
             </tbody>
         </table>
     </>;
