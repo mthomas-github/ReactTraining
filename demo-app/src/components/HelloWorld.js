@@ -5,5 +5,5 @@ export const HelloWorld = () => {
     return <div>
         <h1>Hello World!</h1>
         <span>test</span>
-    </div>;
+        </div>
 };
