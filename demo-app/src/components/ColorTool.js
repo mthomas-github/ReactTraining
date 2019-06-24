@@ -1,9 +1,11 @@
-import React from 'react';
-
-
+import React, { useState } from 'react';
+import { useForm } from '../hooks/useForm';
 
 export const ColorTool = (props) => {
 
+    const [ colorForm, change ] = useForm({
+        newColor: ''
+    });
     return <>
         <header>
             <h1>Color Tool</h1>
@@ -14,7 +16,7 @@ export const ColorTool = (props) => {
         <form>
             <div>
                 <label htmlFor="new-color-input">New Color:</label>
-                <input type="text" id="new-color-input" value={} onChange={} />
+                <input type="text" id="new-color-input" name="newColor" value={colorForm.newColor} onChange={change} />
             </div>
         </form>
     </>;
