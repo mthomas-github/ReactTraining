@@ -1,0 +1,9 @@
+1. Add a table of cars to Car Tool. The table (use the table element and related elements) should have the following columns:
+
+Id, Make, Model, Year, Color, Price
+
+2. Display a column header for each column
+
+3. hard code 2 rows of car data into the car table
+
+4. Ensure it works.
