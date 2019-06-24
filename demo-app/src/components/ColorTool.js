@@ -2,18 +2,14 @@ import React from 'react';
 
 
 
-export const ColorTool = () => {
-
-    const colors = [
-        'purple', 'blue', 'green', 'red', 'pink', 'orange', 'black', 'yellow'
-    ];
+export const ColorTool = (props) => {
 
     return <>
         <header>
             <h1>Color Tool</h1>
         </header>
         <ul>
-            {colors.map((color, index) => <li key={index}>{color}</li>)}
+            {props.colors.map((color, index) => <li key={index}>{color}</li>)}
         </ul>
     </>;
 };
