@@ -4,9 +4,10 @@ import { HelloWorld } from './components/HelloWorld';
 import { CarTool } from './components/CarTool';
 
 ReactDOM.render(
-    <div>
+    // <> == <React.Fragment>
+    <>
     <HelloWorld />
     <CarTool />
-    </div>,
+    </>,
     document.querySelector('#root'),
 );
