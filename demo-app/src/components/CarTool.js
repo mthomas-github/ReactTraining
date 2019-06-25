@@ -4,14 +4,15 @@ import { useForm } from '../hooks/useForm';
 
 export const CarTool = (props) => {
 
-    const [ carForm, change ] = useForm({
+    const [carForm, change] = useForm({
         newMake: '',
         newModel: '',
-        newYear: '',
+        newYear: 1900,
         newColor: '',
-        newPrice: ''
-      });
-      console.log(carForm)
+        newPrice: 0
+    });
+    console.log(carForm)
+
     return <>
         <header>
             <h1>Car Tool</h1>
@@ -19,12 +20,12 @@ export const CarTool = (props) => {
         <table>
             <thead>
                 <tr>
-                   <th>Id</th>
-                   <th>Make</th>
-                   <th>Model</th>
-                   <th>Year</th>
-                   <th>Color</th>
-                   <th>Price</th>
+                    <th>Id</th>
+                    <th>Make</th>
+                    <th>Model</th>
+                    <th>Year</th>
+                    <th>Color</th>
+                    <th>Price</th>
                 </tr>
             </thead>
             <tbody>
