@@ -9,8 +9,8 @@ const colorsList = [
 ];
 
 const carsList = [
-    { id: 'Telsa1', make: 'Telsa', model: 'Model S', year: 2019, color: 'Black', price: 165000 },
-    { id: 'Telsa2', make: 'Telsa', model: 'Model 3', year: 2019, color: 'White', price: 65000 }
+    { id: '1', make: 'Telsa', model: 'S', year: 2019, color: 'Black', price: 165000 },
+    { id: '2', make: 'Telsa', model: '3', year: 2019, color: 'White', price: 65000 }
 ];
 
 
