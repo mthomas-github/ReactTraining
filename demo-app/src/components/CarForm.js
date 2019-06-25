@@ -11,13 +11,7 @@ export const CarForm = ({ buttonText, onSubmitCar }) => {
   });
 
   const submitCar = () => {
-    onSubmitCar({
-      make: carForm.make,
-      model: carForm.model,
-      year: carForm.year,
-      color: carForm.color,
-      price: carForm.price
-    });
+    onSubmitCar({ ...carForm });
     resetCarForm();
   };
 
@@ -78,4 +72,13 @@ export const CarForm = ({ buttonText, onSubmitCar }) => {
       </button>
     </form>
   );
+};
+
+CarForm.defaultProps = {
+  buttonText: "Add Car"
+};
+
+CarForm.propTypes = {
+  buttonText: PropTypes.string,
+  onSubmitCar: PropTypes.func.isRequired
 };
