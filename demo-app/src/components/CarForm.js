@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm } from "../hooks/useForm";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 export const CarForm = ({ buttonText, onSubmitCar }) => {
   const [carForm, change, resetCarForm] = useForm({
@@ -8,8 +8,7 @@ export const CarForm = ({ buttonText, onSubmitCar }) => {
     model: "",
     year: 1900,
     color: "",
-    price: 0,
-    isEditMode: false
+    price: 0
   });
 
   const submitCar = () => {
