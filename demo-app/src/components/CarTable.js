@@ -1,7 +1,7 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { ViewCarRow } from "./ViewCarRow";
 import { carsPropType } from "../PropTypes/car";
+import PropTypes from 'prop-types';
 
 export const CarTable = ({ cars, onDeleteCar }) => {
   return (
@@ -30,4 +30,7 @@ CarTable.defaultProps = {
   cars: []
 };
 
-CarTable.propTypes = carsPropType;
+CarTable.propTypes = {
+  cars: carsPropType,
+  onDeleteCar: PropTypes.func.isRequired
+};

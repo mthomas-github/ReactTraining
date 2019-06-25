@@ -27,4 +27,6 @@ ViewCarRow.defaultProps = {
   deleteButton: "Remove"
 };
 
-ViewCarRow.propTypes = carPropType;
+ViewCarRow.propTypes = {
+  car: carPropType
+};
