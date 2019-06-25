@@ -1,7 +1,11 @@
 import React from "react";
 import { carPropType } from "../PropTypes/car";
 
-export const ViewCarRow = ({ car }) => {
+export const ViewCarRow = ({ car, onDeleteCar }) => {
+  const deleteCar = () => {
+    onDeleteCar(car.id);
+  };
+
   return (
     <tr>
       <td>{car.id}</td>
@@ -10,8 +14,17 @@ export const ViewCarRow = ({ car }) => {
       <td>{car.year}</td>
       <td>{car.color}</td>
       <td>{car.price}</td>
+      <td>
+        <button type="button" onClick={deleteCar}>
+          Delete
+        </button>
+      </td>
     </tr>
   );
+};
+
+ViewCarRow.defaultProps = {
+  deleteButton: "Remove"
 };
 
 ViewCarRow.propTypes = carPropType;

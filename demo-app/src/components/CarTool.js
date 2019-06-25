@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { useForm } from "../hooks/useForm";
 
 import { ToolHeader } from "./ToolHeader";
-import { CarTable } from "./CarTable"
+import { CarTable } from "./CarTable";
 
-export const CarTool = (props) => {
+export const CarTool = props => {
   const [carForm, change, resetCarForm] = useForm({
     make: "",
     model: "",
@@ -25,12 +25,16 @@ export const CarTool = (props) => {
     resetCarForm();
   };
 
+  const deleteCar = carId => {
+    setCars(cars.filter(c => c.id !== carId));
+  };
+
   console.log(carForm);
 
   return (
     <>
       <ToolHeader headerText="Car Tool" />
-      <CarTable cars={cars}/>
+      <CarTable cars={cars} onDeleteCar={deleteCar} />
       <h4>Add New Car</h4>
       <form>
         <div>
