@@ -8,7 +8,8 @@ export const CarForm = ({ buttonText, onSubmitCar }) => {
     model: "",
     year: 1900,
     color: "",
-    price: 0
+    price: 0,
+    isEdit: false
   });
 
   const submitCar = () => {

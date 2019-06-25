@@ -1,9 +1,13 @@
 import React from "react";
 import { carPropType } from "../PropTypes/car";
 
-export const ViewCarRow = ({ car, onDeleteCar }) => {
+export const ViewCarRow = ({ car, onDeleteCar, onEditCar }) => {
   const deleteCar = () => {
     onDeleteCar(car.id);
+  };
+
+  const editCar = () => {
+    onEditCar(car.id)
   };
 
   return (
@@ -17,6 +21,9 @@ export const ViewCarRow = ({ car, onDeleteCar }) => {
       <td>
         <button type="button" onClick={deleteCar}>
           Delete
+        </button>
+        <button type="button" onClick={editCar}>
+          Edit
         </button>
       </td>
     </tr>

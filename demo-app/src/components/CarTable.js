@@ -1,9 +1,10 @@
 import React from "react";
 import { ViewCarRow } from "./ViewCarRow";
 import { carsPropType } from "../PropTypes/car";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
+import { EditCarRow } from "./EditCarRow";
 
-export const CarTable = ({ cars, onDeleteCar }) => {
+export const CarTable = ({ cars, onDeleteCar, onEditCar }) => {
   return (
     <table>
       <thead>
@@ -18,9 +19,18 @@ export const CarTable = ({ cars, onDeleteCar }) => {
         </tr>
       </thead>
       <tbody>
-        {cars.map(car => (
-          <ViewCarRow key={car.id} car={car} onDeleteCar={onDeleteCar} />
-        ))}
+        {cars.map(car =>
+          !car.isEdit ? (
+            <ViewCarRow
+              key={car.id}
+              car={car}
+              onDeleteCar={onDeleteCar}
+              onEditCar={onEditCar}
+            />
+          ) : (
+            <EditCarRow key={car.id} car={car} />
+          )
+        )}
       </tbody>
     </table>
   );

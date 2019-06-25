@@ -6,11 +6,23 @@ import { CarForm } from "./CarForm";
 export const CarTool = props => {
   const [cars, setCars] = useState(props.cars.concat());
 
-  const addCar = (car) => {
+  const addCar = car => {
     setCars(
       cars.concat({
         ...car,
-        id: Math.max(...cars.map(c => c.id), 0) + 1
+        id: Math.max(...cars.map(c => c.id), 0) + 1,
+        isEdit: false
+      })
+    );
+  };
+
+  const editCar = (id) => {
+    setCars(
+      cars.map(car => {
+        return {
+          ...car,
+          isEdit: car.id === id
+        };
       })
     );
   };
@@ -22,7 +34,7 @@ export const CarTool = props => {
   return (
     <>
       <ToolHeader headerText="Car Tool" />
-      <CarTable cars={cars} onDeleteCar={deleteCar} />
+      <CarTable cars={cars} onDeleteCar={deleteCar} onEditCar={editCar} />
       <h4>Add New Car</h4>
       <CarForm buttonText="Add Car" onSubmitCar={addCar} />
     </>
