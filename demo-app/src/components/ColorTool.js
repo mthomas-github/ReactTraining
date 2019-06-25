@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 
 import { useForm } from "../hooks/useForm";
+import { ToolHeader } from "./ToolHeader";
 
-export const ColorTool = props => {
+export const ColorTool = (props) => {
   const [colorForm, change, resetColorTool] = useForm({
     newColor: "",
     newHexCode: ""
@@ -17,9 +18,7 @@ export const ColorTool = props => {
 
   return (
     <>
-      <header>
-        <h1>Color Tool</h1>
-      </header>
+      <ToolHeader headerText="Color Tool" />
       <ul>
         {colors.map((color, index) => (
           <li key={index}>{color}</li>
