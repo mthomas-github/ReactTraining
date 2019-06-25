@@ -1,0 +1,7 @@
+Exercise 6
+
+1. Update Car Tool to add the car to the array of cars. Be sure ot generate a unique id when adding the car to the array
+
+2. Clear the form when adding the car
+
+3. ensure it works.
