@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useForm } from "../hooks/useForm";
 
 export const ColorTool = props => {
-  const [colorForm, change] = useForm({
+  const [colorForm, change, resetColorTool] = useForm({
     newColor: "",
     newHexCode: ""
   });
@@ -12,6 +12,7 @@ export const ColorTool = props => {
 
   const addColor = () => {
     setColors(colors.concat(colorForm.newColor));
+    resetColorTool();
   };
 
   return (
