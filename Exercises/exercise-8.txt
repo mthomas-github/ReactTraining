@@ -1,5 +1,9 @@
 Exercise 8
 
-1 . Create a new component named View Car Row. The view car row component will display single row of car data.
-2. Utilize the view car row component in car table display each car in the table.
-3. Ensure it works.
+1. Do 10 pushups.
+
+2. Create a new component named View Car Row. The view car row component will display a single row of car data.
+
+3. Utilize the View Car Row component in Car Table display each car in the table.
+
+4. Ensure it works.
