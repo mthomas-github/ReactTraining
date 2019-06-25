@@ -1,9 +1,9 @@
 import React from "react";
-import PropTypes from "prop-types";
+import { carPropType } from "../PropTypes/car";
 
 export const ViewCarRow = ({ car }) => {
   return (
-    <tr key={car.id}>
+    <tr>
       <td>{car.id}</td>
       <td>{car.make}</td>
       <td>{car.model}</td>
@@ -14,17 +14,4 @@ export const ViewCarRow = ({ car }) => {
   );
 };
 
-ViewCarRow.defaultProps = {
-  car: []
-};
-
-ViewCarRow.propTypes = {
-  car: PropTypes.shape({
-    id: PropTypes.number,
-    make: PropTypes.string,
-    model: PropTypes.string,
-    year: PropTypes.number,
-    color: PropTypes.string,
-    price: PropTypes.number
-  })
-};
+ViewCarRow.propTypes = carPropType;
