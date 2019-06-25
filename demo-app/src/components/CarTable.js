@@ -1,6 +1,9 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-export const CarTable = props => {
+import { ViewCarRow } from './ViewCarRow';
+
+export const CarTable = ({ cars }) => {
   return (
     <table>
       <thead>
@@ -13,18 +16,7 @@ export const CarTable = props => {
           <th>Price</th>
         </tr>
       </thead>
-      <tbody>
-        {props.cars.map(car => (
-          <tr key={car.id}>
-            <td>{car.id}</td>
-            <td>{car.make}</td>
-            <td>{car.model}</td>
-            <td>{car.year}</td>
-            <td>{car.color}</td>
-            <td>{car.price}</td>
-          </tr>
-        ))}
-      </tbody>
+      <ViewCarRow cars={cars} />
     </table>
   );
 };
