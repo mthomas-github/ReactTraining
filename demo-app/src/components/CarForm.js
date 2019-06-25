@@ -9,7 +9,7 @@ export const CarForm = ({ buttonText, onSubmitCar }) => {
     year: 1900,
     color: "",
     price: 0,
-    isEdit: false
+    isEditMode: false
   });
 
   const submitCar = () => {

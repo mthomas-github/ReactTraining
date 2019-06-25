@@ -11,7 +11,7 @@ export const CarTool = props => {
       cars.concat({
         ...car,
         id: Math.max(...cars.map(c => c.id), 0) + 1,
-        isEdit: false
+        isEditMode: false
       })
     );
   };
@@ -21,7 +21,7 @@ export const CarTool = props => {
       cars.map(car => {
         return {
           ...car,
-          isEdit: car.id === id
+          isEditMode: car.id === id
         };
       })
     );

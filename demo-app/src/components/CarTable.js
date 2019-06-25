@@ -20,7 +20,7 @@ export const CarTable = ({ cars, onDeleteCar, onEditCar }) => {
       </thead>
       <tbody>
         {cars.map(car =>
-          !car.isEdit ? (
+          !car.isEditMode ? (
             <ViewCarRow
               key={car.id}
               car={car}
