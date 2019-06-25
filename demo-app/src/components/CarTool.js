@@ -29,8 +29,6 @@ export const CarTool = props => {
     setCars(cars.filter(c => c.id !== carId));
   };
 
-  console.log(carForm);
-
   return (
     <>
       <ToolHeader headerText="Car Tool" />
