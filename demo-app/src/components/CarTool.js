@@ -3,30 +3,26 @@ import { useForm } from "../hooks/useForm";
 
 export const CarTool = props => {
   const [carForm, change, resetCarForm] = useForm({
-    newMake: "",
-    newModel: "",
-    newYear: 1900,
-    newColor: "",
-    newPrice: 0
+    make: "",
+    model: "",
+    year: 1900,
+    color: "",
+    price: 0
   });
-  console.log(carForm);
 
   const [cars, setCars] = useState(props.cars.concat());
-  const newId = Math.max(...cars.map(c => c.id), 0) + 1;
 
   const addCar = () => {
     setCars(
       cars.concat({
-        id: newId,
-        make: carForm.newMake,
-        model: carForm.newModel,
-        year: carForm.newYear,
-        color: carForm.newColor,
-        price: carForm.newPrice
+        ...carForm,
+        id: Math.max(...cars.map(c => c.id), 0) + 1,
       })
     );
     resetCarForm();
   };
+
+  console.log(carForm);
 
   return (
     <>
@@ -64,8 +60,8 @@ export const CarTool = props => {
           <input
             type="text"
             id="make-input"
-            name="newMake"
-            value={carForm.newMake}
+            name="make"
+            value={carForm.make}
             onChange={change}
           />
         </div>
@@ -74,8 +70,8 @@ export const CarTool = props => {
           <input
             type="text"
             id="model-input"
-            name="newModel"
-            value={carForm.newModel}
+            name="model"
+            value={carForm.model}
             onChange={change}
           />
         </div>
@@ -84,8 +80,8 @@ export const CarTool = props => {
           <input
             type="number"
             id="year-input"
-            name="newYear"
-            value={carForm.newYear}
+            name="year"
+            value={carForm.year}
             onChange={change}
           />
         </div>
@@ -94,8 +90,8 @@ export const CarTool = props => {
           <input
             type="text"
             id="color-input"
-            name="newColor"
-            value={carForm.newColor}
+            name="color"
+            value={carForm.color}
             onChange={change}
           />
         </div>
@@ -104,8 +100,8 @@ export const CarTool = props => {
           <input
             type="number"
             id="price-input"
-            name="newPrice"
-            value={carForm.newPrice}
+            name="price"
+            value={carForm.price}
             onChange={change}
           />
         </div>
