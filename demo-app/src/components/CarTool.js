@@ -44,24 +44,24 @@ export const CarTool = (props) => {
         <h4>Add New Car</h4>
         <form>
             <div>
-                <label htmlFor="new-make">Make:</label>
-                <input type="text" id="new-make" name="newMake" value={carForm.newMake} onChange={change} />
+                <label htmlFor="make-input">Make:</label>
+                <input type="text" id="make-input" name="newMake" value={carForm.newMake} onChange={change} />
             </div>
             <div>
-                <label htmlFor="new-model">Model:</label>
-                <input type="text" id="new-model" name="newModel" value={carForm.newModel} onChange={change} />
+                <label htmlFor="model-input">Model:</label>
+                <input type="text" id="model-input" name="newModel" value={carForm.newModel} onChange={change} />
             </div>
             <div>
-                <label htmlFor="new-year">Year:</label>
-                <input type="number" id="new-year" name="newYear" value={carForm.newYear} onChange={change} />
+                <label htmlFor="year-input">Year:</label>
+                <input type="number" id="year-input" name="newYear" value={carForm.newYear} onChange={change} />
             </div>
             <div>
-                <label htmlFor="new-color">Color:</label>
-                <input type="text" id="new-color" name="newColor" value={carForm.newColor} onChange={change} />
+                <label htmlFor="color-input">Color:</label>
+                <input type="text" id="color-input" name="newColor" value={carForm.newColor} onChange={change} />
             </div>
             <div>
-                <label htmlFor="new-price">Price:</label>
-                <input type="number" id="new-price" name="newPrice" value={carForm.newPrice} onChange={change} />
+                <label htmlFor="price-input">Price:</label>
+                <input type="number" id="price-input" name="newPrice" value={carForm.newPrice} onChange={change} />
             </div>
         </form>
     </>;
