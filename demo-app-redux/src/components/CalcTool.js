@@ -3,9 +3,9 @@ import { useNumber } from "../hooks/userNumber";
 import PropTypes from "prop-types";
 
 export const CalcTool = ({
-  resultValue,
+  result,
   onAdd: add,
-  onSubTract: subtract,
+  onSubtract: subtract,
   onMultiply: multiply,
   onDivide: divide
 }) => {
@@ -14,7 +14,7 @@ export const CalcTool = ({
   return (
     <form>
       <div>
-        <span>Result:{resultValue}</span>
+        <span>Result:{result}</span>
       </div>
       <div>
         <label htmlFor="inputValue">Input:</label>
@@ -47,5 +47,5 @@ CalcTool.propTypes = {
   onSubTractClick: PropTypes.func,
   onMultiplyClick: PropTypes.func,
   onDivideClick: PropTypes.func,
-  newValue: PropTypes.number
+  result: PropTypes.number
 };
