@@ -14,6 +14,7 @@ export const CarTool = props => {
         id: Math.max(...cars.map(c => c.id), 0) + 1
       })
     );
+    setEditCarId(-1);
   };
 
   const editCar = carId => {
@@ -22,6 +23,7 @@ export const CarTool = props => {
 
   const deleteCar = carId => {
     setCars(cars.filter(c => c.id !== carId));
+    setEditCarId(-1);
   };
 
   const editCancel = () => {
@@ -29,11 +31,8 @@ export const CarTool = props => {
   };
 
   const editSave = car => {
-    const newCars = props.cars.concat();
-    console.log(car);
-    console.log(newCars);
-    const carIndex = newCars.findIndex(c => c.id === car.id);
-    newCars[carIndex] = car;
+    const newCars = cars.concat();
+    newCars[newCars.findIndex(c => c.id === car.id)] = car;
     setCars(newCars);
     setEditCarId(-1);
   };

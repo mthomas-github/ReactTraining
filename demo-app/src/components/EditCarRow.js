@@ -31,7 +31,7 @@ export const EditCarRow = ({ car, onEditCancel: cancelEdit, onEditSave: saveEdit
         />
       </td>
       <td>
-        <button onClick={() => saveEdit({...car, ...carForm})} onChange={change} type="button">
+        <button onClick={() => saveEdit({...carForm, id: car.id})} onChange={change} type="button">
           Save
         </button>
         <button onClick={cancelEdit} type="button">
