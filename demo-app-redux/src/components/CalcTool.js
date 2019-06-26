@@ -1,5 +1,5 @@
 import React from "react";
-import { useForm } from "../hooks/useForm";
+import { useNumber } from "../hooks/userNumber";
 import PropTypes from "prop-types";
 
 export const CalcTool = ({
@@ -9,9 +9,7 @@ export const CalcTool = ({
   onMultiply: multiply,
   onDivide: divide
 }) => {
-  const [calcForm, change] = useForm({
-    newValue: 0
-  });
+  const [num, change] = useNumber(0);
 
   return (
     <form>
@@ -23,21 +21,21 @@ export const CalcTool = ({
         <input
           type="number"
           id="inputValue"
-          value={calcForm.newValue}
+          value={num}
           onChange={change}
           name="newValue"
         />
       </div>
-      <button type="button" onClick={() => add(calcForm.newValue)}>
+      <button type="button" onClick={() => add(num)}>
         +
       </button>
-      <button type="button" onClick={() => subtract(calcForm.newValue)}>
+      <button type="button" onClick={() => subtract(num)}>
         -
       </button>
-      <button type="button" onClick={() => multiply(calcForm.newValue)}>
+      <button type="button" onClick={() => multiply(num)}>
         *
       </button>
-      <button type="button" onClick={() => divide(calcForm.newValue)}>
+      <button type="button" onClick={() => divide(num)}>
         /
       </button>
     </form>
