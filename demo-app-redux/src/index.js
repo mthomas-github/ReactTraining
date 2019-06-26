@@ -62,41 +62,6 @@ const mapStateToProps = state => {
   };
 };
 
-// const { Provider, Consumer } = React.createContext(null);
-
-// const connect = (mapStateToPropsFn, mapDispatchToPropsFn) => {
-//   return PresentationalComponent => {
-//     class ContainerComponent extends React.Component {
-//       constructor(props) {
-//         super(props);
-//         this.dispatchToPropsMap = mapDispatchToPropsFn(props.store.dispatch);
-//       }
-//       componentDidMount() {
-//         this.unsubscribeStore = this.props.store.subscribe(() => {
-//           this.forceUpdate();
-//         });
-//       }
-
-//       componentWillUnmount() {
-//         this.unsubscribeStore();
-//       }
-
-//       render() {
-//         const stateToPropsMap = mapStateToPropsFn(this.props.store.getState());
-//         return (
-//           <PresentationalComponent
-//             {...stateToPropsMap}
-//             {...this.dispatchToPropsMap}
-//           />
-//         );
-//       }
-//     }
-//     return () => (
-//       <Consumer>{value => <ContainerComponent store={value} />}</Consumer>
-//     );
-//   };
-// };
-
 const createCalcToolContainer = connect(
   mapStateToProps,
   mapDispatchToProps
@@ -111,38 +76,3 @@ ReactDOM.render(
   document.querySelector("#root")
 );
 
-// const dispatchToPropsMap = mapDispatchToProps(calcStore.dispatch);
-
-// calcStore.subscribe(() => {
-//   const stateToPropsMap = mapStateToProps(calcStore.getState());
-
-//   ReactDOM.render(
-//     <CalcTool {...stateToPropsMap} {...dispatchToPropsMap} />,
-//     document.querySelector("#root")
-//   );
-// });
-
-// dispatchToPropsMap.onAdd(0);
-
-// const createStore = reducerFn => {
-//   let currentState = undefined;
-//   const subscribersFn = [];
-//   return {
-//     getState: () => currentState,
-//     dispatch: action => {
-//       currentState = reducerFn(currentState, action);
-//       subscribersFn.forEach(cb => cb());
-//     },
-//     subscribe: cb => {
-//       subscribersFn.push(cb);
-//     }
-//   };
-// };
-
-// const bindActionCreators = (actionMap, dispatchFn) => {
-//   return Object.keys(actionMap).reduce((boundActionMap, actionKey) => {
-//     boundActionMap[actionKey] = (...params) =>
-//       dispatchFn(actionMap[actionKey](...params));
-//     return boundActionMap;
-//   }, {});
-// };
