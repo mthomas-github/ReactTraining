@@ -24,7 +24,7 @@ export const CarTool = props => {
     setCars(cars.filter(c => c.id !== carId));
   };
 
-  const editCancel = carId => {
+  const editCancel = () => {
     setEditCarId(-1);
   };
 
@@ -36,7 +36,7 @@ export const CarTool = props => {
     newCars[carIndex] = car;
     setCars(newCars);
     setEditCarId(-1);
-  }
+  };
 
   return (
     <>
