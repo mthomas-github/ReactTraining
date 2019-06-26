@@ -26,11 +26,11 @@ export const CarTool = props => {
     setEditCarId(-1);
   };
 
-  const editCancel = () => {
+  const cancelCar = () => {
     setEditCarId(-1);
   };
 
-  const editSave = car => {
+  const replaceCar = car => {
     const newCars = cars.concat();
     newCars[newCars.findIndex(c => c.id === car.id)] = car;
     setCars(newCars);
@@ -45,8 +45,8 @@ export const CarTool = props => {
         editCarId={editCarId}
         onDeleteCar={deleteCar}
         onEditCar={editCar}
-        onEditCancel={editCancel}
-        onEditSave={editSave}
+        onCancelCar={cancelCar}
+        onSaveCar={replaceCar}
       />
       <h4>Add New Car</h4>
       <CarForm buttonText="Add Car" onSubmitCar={addCar} />

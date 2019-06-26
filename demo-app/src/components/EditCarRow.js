@@ -2,7 +2,7 @@ import React from "react";
 import { useForm } from "../hooks/useForm";
 import { carPropType } from "../PropTypes/car";
 
-export const EditCarRow = ({ car, onEditCancel: cancelEdit, onEditSave: saveEdit }) => {
+export const EditCarRow = ({ car, onCancelCar: cancelCar, onSaveCar: replaceCar }) => {
   const [carForm, change] = useForm({
     ...car
   });
@@ -31,10 +31,10 @@ export const EditCarRow = ({ car, onEditCancel: cancelEdit, onEditSave: saveEdit
         />
       </td>
       <td>
-        <button onClick={() => saveEdit({...carForm, id: car.id})} onChange={change} type="button">
+        <button onClick={() => replaceCar({...carForm, id: car.id})} onChange={change} type="button">
           Save
         </button>
-        <button onClick={cancelEdit} type="button">
+        <button onClick={cancelCar} type="button">
           Cancel
         </button>
       </td>
