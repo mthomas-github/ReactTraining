@@ -1,6 +1,8 @@
 Exercise 12
 
-1. Implement save and cancel for the edit car row component. When you click save, save the changes to the array of cars and change the row to car view row. When you click cancel, discard the changes and change the row to view row.
+1. Implement save and cancel for the edit car row component. When you click save, 
+save the changes to the array of cars and change the row to car view row. When you click cancel, 
+discard the changes and change the row to view row.
 
 Helpful Happy Hint: to do the save, make a copy of the array and replace the item
 
