@@ -3,6 +3,7 @@ import { ViewCarRow } from "./ViewCarRow";
 import { carsPropType } from "../PropTypes/car";
 import PropTypes from "prop-types";
 import { EditCarRow } from "./EditCarRow";
+import { Table } from 'react-bootstrap';
 
 export const CarTable = ({
   cars,
@@ -13,7 +14,7 @@ export const CarTable = ({
   onSaveCar: replaceCar
 }) => {
   return (
-    <table>
+    <Table responsive>
       <thead>
         <tr>
           <th>Id</th>
@@ -44,7 +45,7 @@ export const CarTable = ({
           )
         )}
       </tbody>
-    </table>
+    </Table>
   );
 };
 
