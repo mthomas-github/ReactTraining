@@ -1,0 +1,28 @@
+{
+    "cars": [
+        {
+            "id": 1,
+            "make": "Tesla",
+            "model": "S",
+            "year": 2019,
+            "color": "Black",
+            "price": 165000
+        },
+        {
+            "id": 2,
+            "make": "Tesla",
+            "model": "3",
+            "year": 2019,
+            "color": "Red",
+            "price": 35000
+        },
+        {
+            "id": 3,
+            "make": "Tesla",
+            "model": "X",
+            "year": 2019,
+            "color": "Blue",
+            "price": 100000
+        }
+    ]
+}
