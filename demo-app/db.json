@@ -18,11 +18,11 @@
     },
     {
       "make": "Telsa",
-      "model": "Y",
+      "model": "Truck",
       "year": 2020,
-      "color": "White",
-      "price": 1200000,
-      "id": 4
+      "color": "Blue",
+      "price": 120000,
+      "id": 5
     }
   ]
 }

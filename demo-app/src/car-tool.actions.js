@@ -105,11 +105,16 @@ export const replaceCar = car => {
 export const deleteCar = carId => {
   return dispatch => {
     dispatch(createDeleteCarRequestAction(carId));
-    return fetch("http://localhost:3050/cars/" + encodeURIComponent(carId), {
-      method: "DELETE"
-    })
-      .then(res => res.json)
-      .then(car => dispatch(createDeleteCarDoneAction(car)))
+    return fetch("http://localhost:3050/cars/" + encodeURIComponent(carId))
+      .then(res => res.json())
+      .then(carToDelete => {
+        return fetch(
+          "http://localhost:3050/cars/" + encodeURIComponent(carId),
+          {
+            method: "DELETE"
+          }
+        ).then(() => dispatch(createDeleteCarDoneAction(carToDelete)));
+      })
       .then(() => dispatch(refreshCars()));
   };
 };
