@@ -9,8 +9,6 @@ import {
   REFRESH_CARS_REQUEST_ACTION
 } from "./car-tool.actions";
 
-//const carList = [];
-
 const carsReducer = (state = [], action) => {
   switch (action.type) {
     case REFRESH_CARS_DONE_ACTION:
