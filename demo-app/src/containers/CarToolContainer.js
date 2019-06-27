@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import {
   createCancelCarAction,
   deleteCar,
-  createEditCarRequestAction,
+  createEditCarAction,
   refreshCars,
   appendCar,
   replaceCar
@@ -20,7 +20,7 @@ export const CarToolContainer = connect(
         onAddCar: appendCar,
         onSaveCar: replaceCar,
         onDeleteCar: deleteCar,
-        onEditCar: createEditCarRequestAction,
+        onEditCar: createEditCarAction,
         onCancelCar: createCancelCarAction
       },
       dispatch

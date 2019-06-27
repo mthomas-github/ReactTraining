@@ -1,7 +1,7 @@
 import { combineReducers } from "redux";
 import {
-  CANCEL_CAR_REQUEST_ACTION,
-  EDIT_CAR_REQUEST_ACTION,
+  CANCEL_CAR_ACTION,
+  EDIT_CAR_ACTION,
   REFRESH_CARS_DONE_ACTION
 } from "./car-tool.actions";
 
@@ -16,11 +16,11 @@ const carsReducer = (state = [], action) => {
 };
 
 const editCarIdReducer = (state = -1, action) => {
-  if (action.type === EDIT_CAR_REQUEST_ACTION) {
+  if (action.type === EDIT_CAR_ACTION) {
     return action.payload.carId;
   }
 
-  if(action.type.endsWith('Request') || action.type === CANCEL_CAR_REQUEST_ACTION) {
+  if(action.type.endsWith('Request') || action.type === CANCEL_CAR_ACTION) {
     return -1
   }
   return state;
