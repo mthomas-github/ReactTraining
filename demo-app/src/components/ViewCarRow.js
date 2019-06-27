@@ -1,7 +1,12 @@
 import React from "react";
 import { carPropType } from "../PropTypes/car";
+import { Button, ButtonGroup } from "react-bootstrap";
 
-export const ViewCarRow = ({ car, onEditCar: editCar, onDeleteCar: deleteCar }) => {
+export const ViewCarRow = ({
+  car,
+  onEditCar: editCar,
+  onDeleteCar: deleteCar
+}) => {
   return (
     <tr>
       <td>{car.id}</td>
@@ -11,12 +16,18 @@ export const ViewCarRow = ({ car, onEditCar: editCar, onDeleteCar: deleteCar }) 
       <td>{car.color}</td>
       <td>{car.price}</td>
       <td>
-        <button type="button" onClick={() => editCar(car.id)}>
-          Edit
-        </button>
-        <button type="button" onClick={() => deleteCar(car.id)}>
-          Delete
-        </button>
+        <ButtonGroup>
+          <Button variant="info" type="button" onClick={() => editCar(car.id)}>
+            Edit
+          </Button>
+          <Button
+            variant="danger"
+            type="button"
+            onClick={() => deleteCar(car.id)}
+          >
+            Delete
+          </Button>
+        </ButtonGroup>
       </td>
     </tr>
   );

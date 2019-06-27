@@ -90,10 +90,14 @@ export const CarForm = ({ buttonText, onSubmitCar }) => {
             />
           </Col>
         </Form.Group>
+        <Form.Group>
+          <Col sm="10">
+            <Button variant="success" type="button" onClick={submitCar}>
+              {buttonText}
+            </Button>
+          </Col>
+        </Form.Group>
       </div>
-      <Button variant="success" type="button" onClick={submitCar}>
-        {buttonText}
-      </Button>
     </Form>
   );
 };
