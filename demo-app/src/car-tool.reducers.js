@@ -4,24 +4,17 @@ import {
   REPLACE_CAR_ACTION,
   DELETE_CAR_ACTION,
   CANCEL_CAR_ACTION,
-  EDIT_CAR_ACTION
+  EDIT_CAR_ACTION,
+  REFRESH_CARS_DONE_ACTION,
+  REFRESH_CARS_REQUEST_ACTION
 } from "./car-tool.actions";
 
-const carList = [
-  {
-    id: 1,
-    make: "Tesla",
-    model: "S",
-    year: 2019,
-    color: "Black",
-    price: 165000
-  },
-  { id: 2, make: "Tesla", model: "3", year: 2019, color: "Red", price: 35000 },
-  { id: 3, make: "Tesla", model: "X", year: 2019, color: "Blue", price: 100000 }
-];
+//const carList = [];
 
-const carsReducer = (state = carList, action) => {
+const carsReducer = (state = [], action) => {
   switch (action.type) {
+    case REFRESH_CARS_DONE_ACTION:
+      return action.payload.cars;
     case APPEND_CAR_ACTION:
       return state.concat({
         ...action.payload.car,
@@ -46,6 +39,7 @@ const editCarIdReducer = (state = -1, action) => {
 
   if (
     [
+      REFRESH_CARS_REQUEST_ACTION,
       APPEND_CAR_ACTION,
       REPLACE_CAR_ACTION,
       DELETE_CAR_ACTION,

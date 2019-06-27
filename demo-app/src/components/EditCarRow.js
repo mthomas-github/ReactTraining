@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm } from "../hooks/useForm";
-import { carPropType } from "../PropTypes/car";
+import { carPropType } from "../proptypes/car";
 import { Button, ButtonGroup } from "react-bootstrap";
 
 export const EditCarRow = ({

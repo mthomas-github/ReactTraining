@@ -1,6 +1,6 @@
 import React from "react";
 import { ViewCarRow } from "./ViewCarRow";
-import { carsPropType } from "../PropTypes/car";
+import { carsPropType } from "../proptypes/car";
 import PropTypes from "prop-types";
 import { EditCarRow } from "./EditCarRow";
 import { Table } from 'react-bootstrap';

@@ -6,7 +6,8 @@ import {
   createCancelCarAction,
   createDeleteCarAction,
   createEditCarAction,
-  createReplaceCarAction
+  createReplaceCarAction,
+  refreshCars
 } from "../car-tool.actions";
 import { CarTool } from "../components";
 
@@ -15,6 +16,7 @@ export const CarToolContainer = connect(
   dispatch =>
     bindActionCreators(
       {
+        onRefreshCars: refreshCars,
         onAddCar: createAppendCarAction,
         onSaveCar: createReplaceCarAction,
         onDeleteCar: createDeleteCarAction,
