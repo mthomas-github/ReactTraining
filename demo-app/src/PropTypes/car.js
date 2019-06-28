@@ -11,4 +11,4 @@ export const carPropType = PropTypes.shape({
 });
 
 export const carsPropType = PropTypes.arrayOf(carPropType);
-
+export const car=[]
