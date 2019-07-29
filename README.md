@@ -1,6 +1,6 @@
 pre request
-VS Code
-Node.js 10 or later https://nodejs.org/en/
+1. VS Code
+2. Node.js 10 or later https://nodejs.org/en/
 
 Run Project
 1. Open up project in VS Code
